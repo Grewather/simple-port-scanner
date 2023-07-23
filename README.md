@@ -9,7 +9,7 @@ $ go mod tidy
 ## Usage
 To run this project, execute the following command in the terminal:
 ```
-go run .\main.go
+$ go run .\main.go
 ```
 ## License
 Project is distributed under the mit license
