@@ -60,15 +60,14 @@ func main() {
 	fmt.Print("Target ip adress: ")
 	fmt.Scanln(&targetIp)
 
-	// TODO: OSOBNA FUNKCJA I ZAPIS DO PLIKU TXT
-	fmt.Print("Choose port range = first port: ")
+	fmt.Print("Select port range = first port: ")
 	fmt.Scanln(&startPort)
 	if startPort < 1 || startPort > 65535 {
 		fmt.Println("Invalid starting port. Please enter a valid port number (1-65535).")
 		return
 	}
 
-	fmt.Print("Choose port range = last port: ")
+	fmt.Print("Select port range = last port: ")
 	fmt.Scanln(&endPort)
 	if endPort < 1 || endPort > 65535 {
 		fmt.Println("Invalid ending port. Please enter a valid port number (1-65535).")
@@ -79,7 +78,7 @@ func main() {
 		fmt.Println("Invalid port range. The first port should be less than or equal to the last port.")
 		return
 	}
-	fmt.Print("Choose result filename: ")
+	fmt.Print("Select result filename: ")
 	fmt.Scanln(&ResultfileName)
 	for port := startPort; port <= endPort; port++ {
 		makeReq(targetIp, port)
